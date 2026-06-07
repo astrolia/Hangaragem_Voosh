@@ -9,13 +9,13 @@
 
         <class>com.sahthan.sahthan_v1.model.Aeronave</class>
         <class>org.sahthan.sahthan_v1.model.Localidade</class>
+        <class>org.sahthan.sahthan_v1.model.Usuario</class>
 
         <properties>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
             <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sahthanDB?createDatabaseIfNotExist=true&amp;serverTimezone=UTC" />
             <property name="jakarta.persistence.jdbc.user" value="root" />
             <property name="jakarta.persistence.jdbc.password" value="" />
-
 
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
