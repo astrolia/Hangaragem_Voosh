@@ -1,9 +1,6 @@
 package org.sahthan.sahthan_v1.model;
 
 import jakarta.persistence.*;
-import org.hibernate.boot.model.naming.Identifier;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -52,11 +49,11 @@ public class Localidade {
         this.nomeAeroporto = nomeAeroporto;
     }
 
-    public int getnPistas() {
+    public int getNPistas() {
         return nPistas;
     }
 
-    public void setnPistas(int nPistas) {
+    public void setNPistas(int nPistas) {
         this.nPistas = nPistas;
     }
 

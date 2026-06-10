@@ -2,8 +2,6 @@ package org.sahthan.sahthan_v1.model;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
-
 @Entity
 @Table(name="hangar")
 public class Hangar {

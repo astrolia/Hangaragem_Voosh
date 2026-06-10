@@ -23,6 +23,4 @@ module org.sahthan.sahthan_v1 {
     opens org.sahthan.sahthan_v1.controller.localidade to javafx.fxml;
     exports org.sahthan.sahthan_v1.controller.locacao;
     opens org.sahthan.sahthan_v1.controller.locacao to javafx.fxml;
-    exports org.sahthan.sahthan_v1.controller.usuario;
-    opens org.sahthan.sahthan_v1.controller.usuario to javafx.fxml;
 }
