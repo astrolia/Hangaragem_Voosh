@@ -1,5 +1,6 @@
 package org.sahthan.sahthan_v1.controller.hangar;
 
+import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -12,6 +13,8 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.sahthan.sahthan_v1.application.MenuApllication;
 import org.sahthan.sahthan_v1.model.Hangar;
+import org.sahthan.sahthan_v1.model.Locacao;
+import org.sahthan.sahthan_v1.model.Localidade;
 import org.sahthan.sahthan_v1.service.HangarService;
 import javafx.event.ActionEvent;
 
@@ -37,6 +40,8 @@ public class VisualizarHangarController implements Initializable {
     private TableColumn<Hangar, Double> columnComprimento;
     @FXML
     private TableColumn<Hangar, String> columnStatusHangar;
+    @FXML
+    private TableColumn<Hangar, String> columnLocalidade;
 
     private List<Hangar> listarHangar= hangarService.listarHangar();
 
@@ -55,6 +60,10 @@ public class VisualizarHangarController implements Initializable {
                 String statusFormatado = status.equals("DISPONIVEL") ? "Disponível" : "Locado";
                 return new javafx.beans.property.SimpleStringProperty(statusFormatado);
             });
+
+            columnLocalidade.setCellValueFactory(cellData ->
+                    new SimpleStringProperty(cellData.getValue().getLocalidade().getNomeAeroporto()));
+
             observableListHangares = FXCollections.observableArrayList(listarHangar);
 
             tableViewHangar.setItems(observableListHangares);
