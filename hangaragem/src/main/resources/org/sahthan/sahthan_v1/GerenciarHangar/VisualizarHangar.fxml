@@ -10,6 +10,7 @@
    <children>
       <TableView fx:id="tableViewHangar" maxWidth="1.7976931348623157E308" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: C2E1FF;">
         <columns>
+            <TableColumn fx:id="columnNomeHangar" prefWidth="75.0" style="-fx-base: #82C1FF;" text="Nome" />
           <TableColumn fx:id="columnAltura" prefWidth="75.0" style="-fx-base: #82C1FF;" text="Altura" />
             <TableColumn fx:id="columnLargura" prefWidth="75.0" style="-fx-base: #82C1FF;" text="Largura" />
             <TableColumn fx:id="columnComprimento" prefWidth="75.0" style="-fx-base: #82C1FF;" text="Comprimento" />

@@ -2,6 +2,7 @@ package org.sahthan.sahthan_v1.service;
 
 import org.sahthan.sahthan_v1.dao.UsuarioDAO;
 import org.sahthan.sahthan_v1.model.Usuario;
+import org.sahthan.sahthan_v1.util.HashUtil;
 
 public class UsuarioService {
 
