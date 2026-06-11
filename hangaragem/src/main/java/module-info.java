@@ -33,10 +33,10 @@ module org.sahthan.sahthan_v1 {
     exports org.sahthan.sahthan_v1.controller.locacao;
     opens org.sahthan.sahthan_v1.controller.locacao to javafx.fxml;
 
-    // MODEL (Hibernate + JavaFX reflection)
+    // MODEL
     opens org.sahthan.sahthan_v1.model to
-        javafx.base,
-        javafx.fxml,
-        org.hibernate.orm.core,
-        jakarta.persistence;
+            org.hibernate.orm.core,
+            javafx.base,
+            javafx.fxml,
+            jakarta.persistence;
 }

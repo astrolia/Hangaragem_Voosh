@@ -71,8 +71,30 @@ public class MenuController {
         }
     }
 
+     @FXML
+    public void irParaVisualizarLocalidade(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/sahthan/sahthan_v1/GerenciarLocalidade/VisualizarLocalidade.fxml"));
+            Parent root = loader.load();
+
+            Scene novaCena = new Scene(root);
+
+
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stageAtual.setScene(novaCena);
+            stageAtual.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
+
     @FXML
     public void irParaCadastrarHangar(ActionEvent event) {
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/sahthan/sahthan_v1/GerenciarHangar/CadastrarHangar.fxml"));
             Parent root = loader.load();
@@ -86,6 +108,27 @@ public class MenuController {
 
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+     @FXML
+    public void irParaVisualizarHangar(ActionEvent event) {
+        try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/org/sahthan/sahthan_v1/GerenciarHangar/VisualizarHangar.fxml"));
+            Parent root = loader.load();
+
+            Scene novaCena = new Scene(root);
+
+
+            Stage stageAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+            stageAtual.setScene(novaCena);
+            stageAtual.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+
         }
     }
 

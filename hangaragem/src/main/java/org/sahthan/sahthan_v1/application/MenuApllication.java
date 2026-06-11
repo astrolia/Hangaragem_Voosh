@@ -14,9 +14,8 @@ public class MenuApllication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        URL fxmlLocation =
-                Launcher.class.getResource(
-                        "/org/sahthan/sahthan_v1/Menu/Menu.fxml");
+        URL fxmlLocation = Launcher.class.getResource(
+                "/org/sahthan/sahthan_v1/Menu/Menu.fxml");
 
         if (fxmlLocation == null) {
             throw new IllegalStateException(

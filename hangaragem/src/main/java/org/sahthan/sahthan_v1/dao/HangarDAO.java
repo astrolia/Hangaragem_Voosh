@@ -2,9 +2,9 @@ package org.sahthan.sahthan_v1.dao;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
-import org.sahthan.sahthan_v1.model.Aeronave;
 import org.sahthan.sahthan_v1.model.Hangar;
 import org.sahthan.sahthan_v1.util.JPAUtil;
+import java.util.List;
 
 public class HangarDAO {
 
@@ -55,6 +55,56 @@ public class HangarDAO {
             System.out.println("ERRO ao atualizar hangar: " + e.getMessage());
             return false;
         } finally {
+            em.close();
+        }
+    }
+
+
+    public void excluirHangar(int id) {
+        EntityManager em = JPAUtil.getEntityManager();
+        EntityTransaction tx = em.getTransaction();
+
+        try {
+            tx.begin();
+
+            // tornar monitorado
+            Hangar hangarGerenciada = em.find(Hangar.class, id);
+
+            // remove se existir
+            if (hangarGerenciada != null) {
+
+                // remove
+                em.remove(hangarGerenciada);
+
+                tx.commit();
+                System.out.println("ID " + id + " excluída.");
+            } else {
+                System.out.println("ID " + id + " não encontrada para exclusão.");
+                tx.rollback();
+            }
+
+        } catch (Exception e) {
+            if (tx.isActive()) {
+                tx.rollback();
+            }
+            System.out.println("ERRO ao excluir hangar: " + e.getMessage());
+        } finally {
+            em.close();
+        }
+    }
+    
+    public List<Hangar> listarHangar(){
+        EntityManager em = JPAUtil.getEntityManager();
+
+        try{
+            String jpql = "SELECT l FROM Hangar l";
+
+            List<Hangar> lista = em.createQuery(jpql, Hangar.class).getResultList();
+            return lista;
+        }catch(Exception e){
+            System.out.println("ERRO ao listar hangar: " + e.getMessage());
+            return null;
+        }finally{
             em.close();
         }
     }
