@@ -3,31 +3,52 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.sahthan.sahthan_v1.controller.usuario.CadastroUsuarioController">
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.sahthan.sahthan_v1.controller.usuario.CadastroUsuarioController"
+           style="-fx-background-color: #f4f4f4;"> <VBox alignment="CENTER"
+                                                         spacing="15"
+                                                         maxWidth="350"
+                                                         maxHeight="550"
+                                                         style="-fx-padding: 30; -fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
 
-    <children>
+    <Label text="Criar Conta"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #333333;"/>
 
-        <VBox spacing="10"
-              layoutX="100"
-              layoutY="60">
+    <Region prefHeight="10"/>
 
-            <Label text="Cadastro"/>
+    <TextField fx:id="txtNome"
+               promptText="Nome"
+               maxWidth="Infinity"
+               prefHeight="35"/>
 
-            <TextField fx:id="txtNome" promptText="Nome"/>
-            <TextField fx:id="txtEmail" promptText="Email"/>
-            <PasswordField fx:id="txtSenha" promptText="Senha"/>
-            <PasswordField fx:id="txtConfirmarSenha" promptText="Confirmar senha"/>
+    <TextField fx:id="txtEmail"
+               promptText="Email"
+               maxWidth="Infinity"
+               prefHeight="35"/>
 
-            <Button text="Salvar"
-                    onAction="#onSalvar"/>
+    <PasswordField fx:id="txtSenha"
+                   promptText="Senha"
+                   maxWidth="Infinity"
+                   prefHeight="35"/>
 
-            <Button text="Voltar"
-                    onAction="#voltarLogin"/>
+    <PasswordField fx:id="txtConfirmarSenha"
+                   promptText="Confirmar senha"
+                   maxWidth="Infinity"
+                   prefHeight="35"/>
 
-        </VBox>
+    <Region prefHeight="10"/>
 
-    </children>
+    <Button text="Salvar"
+            maxWidth="Infinity"
+            prefHeight="35"
+            style="-fx-cursor: hand;"
+            onAction="#onSalvar"/>
 
-</AnchorPane>
+    <Hyperlink text="Voltar para o Login"
+               onAction="#voltarLogin"
+               style="-fx-underline: false;"/>
+
+</VBox>
+
+</StackPane>

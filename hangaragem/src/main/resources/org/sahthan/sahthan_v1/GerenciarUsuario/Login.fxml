@@ -4,55 +4,49 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.sahthan.sahthan_v1.controller.usuario.LoginController">
+<StackPane xmlns="http://javafx.com/javafx"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="org.sahthan.sahthan_v1.controller.usuario.LoginController"
+           style="-fx-background-color: #f4f4f4;"> <VBox alignment="CENTER"
+                                                         spacing="15"
+                                                         maxWidth="350"
+                                                         maxHeight="450"
+                                                         style="-fx-padding: 30; -fx-background-color: white; -fx-background-radius: 8; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);">
 
-    <children>
+    <ImageView fitHeight="120"
+               preserveRatio="true">
+        <image>
+            <Image url="@imagens/logo.png"/>
+        </image>
+    </ImageView>
 
-        <VBox alignment="CENTER"
-              spacing="12"
-              maxWidth="300"
-              AnchorPane.topAnchor="0.0"
-              AnchorPane.bottomAnchor="0.0"
-              AnchorPane.leftAnchor="0.0"
-              AnchorPane.rightAnchor="0.0">
+    <Label text="Sistema de Gerenciamento de Hangares"
+           style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #333333;"
+           wrapText="true"
+           alignment="CENTER"/>
 
-            <!-- Logo -->
-            <ImageView fitHeight="140"
-                       preserveRatio="true">
+    <Region prefHeight="10"/>
 
-                <image>
-                    <Image url="@imagens/logo.png"/>
-                </image>
+    <TextField fx:id="txtEmail"
+               promptText="Email"
+               maxWidth="Infinity"
+               prefHeight="35"/>
 
-            </ImageView>
+    <PasswordField fx:id="txtSenha"
+                   promptText="Senha"
+                   maxWidth="Infinity"
+                   prefHeight="35"/>
 
-            <!-- Subtítulo -->
-            <Label text="Sistema de Gerenciamento de Hangares"
-                   style="-fx-font-size: 14px;"/>
+    <Button text="Entrar"
+            maxWidth="Infinity"
+            prefHeight="35"
+            style="-fx-cursor: hand;"
+            onAction="#onEntrar"/>
 
-            <!-- Campos -->
-            <TextField fx:id="txtEmail"
-                       promptText="Email"
-                       maxWidth="250"/>
+    <Hyperlink text="Criar uma conta"
+               onAction="#irParaCadastro"
+               style="-fx-underline: false;"/>
 
-            <PasswordField fx:id="txtSenha"
-                           promptText="Senha"
-                           maxWidth="250"/>
+</VBox>
 
-            <!-- Login -->
-            <Button text="Entrar"
-                    maxWidth="250"
-                    prefWidth="250"
-                    onAction="#onEntrar"/>
-
-            <!-- Cadastro -->
-            <Hyperlink text="Criar uma conta"
-                       onAction="#irParaCadastro"/>
-
-        </VBox>
-
-    </children>
-
-</AnchorPane>
+</StackPane>

@@ -10,184 +10,153 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<HBox alignment="CENTER"
-      maxHeight="-Infinity"
-      maxWidth="-Infinity"
-      minHeight="-Infinity"
-      minWidth="-Infinity"
-      prefHeight="400.0"
-      prefWidth="600.0"
-      spacing="20.0"
-      xmlns="http://javafx.com/javafx/26"
+<VBox xmlns="http://javafx.com/javafx/26"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.sahthan.sahthan_v1.controller.MenuController">
+      fx:controller="org.sahthan.sahthan_v1.controller.MenuController"
+      style="-fx-background-color: #F3F4F6;"
+      prefHeight="500.0"
+      prefWidth="850.0">
 
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+    <HBox alignment="CENTER_LEFT"
+          style="-fx-background-color: #FFFFFF; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);">
 
-    <children>
+        <padding>
+            <Insets bottom="15.0" left="25.0" right="25.0" top="15.0"/>
+        </padding>
+
+        <children>
+            <Label text="Sistema de Gerenciamento" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;"/>
+
+            <Region HBox.hgrow="ALWAYS" />
+
+            <Button text="Sair do Sistema"
+                    mnemonicParsing="false"
+                    onAction="#logout"
+                    style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-font-weight: bold; -fx-cursor: hand; -fx-background-radius: 5;"/>
+        </children>
+    </HBox>
+
+    <HBox alignment="CENTER"
+          spacing="25.0"
+          VBox.vgrow="ALWAYS">
+
+        <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0"/>
+        </padding>
 
         <VBox alignment="TOP_CENTER"
-              spacing="50.0"
-              style="-fx-background-color: #969EFF;"
+              spacing="15.0"
+              style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4); -fx-padding: 25;"
               HBox.hgrow="ALWAYS">
 
-            <children>
+            <Label text="Aeronaves" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;">
+                <graphic>
+                    <ImageView fitHeight="28.0" fitWidth="28.0" preserveRatio="true">
+                        <image>
+                            <Image url="@imagens/IconAviao.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Label>
 
-                <Label alignment="TOP_LEFT" text="Aeronaves">
-                    <graphic>
-                        <ImageView fitHeight="31.0"
-                                   fitWidth="32.0"
-                                   pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imagens/IconAviao.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font name="System Bold" size="18.0"/>
-                    </font>
-                </Label>
+            <Region prefHeight="15"/>
 
-                <Button fx:id="irCadastro"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaCadastrarAeronave"
-                        style="-fx-base: #969EFF;"
-                        text="Cadastrar"/>
+            <Button fx:id="irCadastro"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaCadastrarAeronave"
+                    style="-fx-background-color: #4F46E5; -fx-text-fill: white; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 38;"
+                    text="Cadastrar Aeronave"/>
 
-                <Button fx:id="irVisualizar"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaVisualizarAeronave"
-                        style="-fx-base: #969EFF;"
-                        text="Visualizar"/>
-
-            </children>
-
-            <padding>
-                <Insets top="20.0"/>
-            </padding>
+            <Button fx:id="irVisualizar"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaVisualizarAeronave"
+                    style="-fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 38;"
+                    text="Visualizar Frota"/>
 
         </VBox>
 
         <VBox alignment="TOP_CENTER"
-              layoutX="30.0"
-              layoutY="30.0"
-              spacing="50.0"
-              style="-fx-background-color: #91F2D8;"
+              spacing="15.0"
+              style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4); -fx-padding: 25;"
               HBox.hgrow="ALWAYS">
 
-            <children>
+            <Label text="Locação" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;">
+                <graphic>
+                    <ImageView fitHeight="28.0" fitWidth="28.0" preserveRatio="true">
+                        <image>
+                            <Image url="@imagens/maos.png"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Label>
 
-                <Label alignment="TOP_LEFT" text="Locação">
-                    <graphic>
-                        <ImageView fitHeight="31.0"
-                                   fitWidth="32.0"
-                                   pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imagens/maos.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font name="System Bold" size="18.0"/>
-                    </font>
-                </Label>
+            <Region prefHeight="15"/>
 
-                <Button fx:id="irCadastro1"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaCadastrarLocacao"
-                        style="-fx-base: #91F2D8;"
-                        text="Nova Locação"/>
+            <Button fx:id="irCadastro1"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaCadastrarLocacao"
+                    style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 38;"
+                    text="Nova Locação"/>
 
-                <Button fx:id="irVisualizar1"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaVisualizarLocacao"
-                        style="-fx-base: #91F2D8;"
-                        text="Gerenciar"/>
-
-            </children>
-
-            <padding>
-                <Insets top="20.0"/>
-            </padding>
+            <Button fx:id="irVisualizar1"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaVisualizarLocacao"
+                    style="-fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 38;"
+                    text="Gerenciar Contratos"/>
 
         </VBox>
 
         <VBox alignment="TOP_CENTER"
-              layoutX="30.0"
-              layoutY="30.0"
-              spacing="50.0"
-              style="-fx-background-color: #94F7A2;"
+              spacing="12.0"
+              style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4); -fx-padding: 25;"
               HBox.hgrow="ALWAYS">
 
-            <children>
+            <Label text="Hangares" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #1F2937;">
+                <graphic>
+                    <ImageView fitHeight="28.0" fitWidth="28.0" preserveRatio="true">
+                        <image>
+                            <Image url="@imagens/hangar.jpg"/>
+                        </image>
+                    </ImageView>
+                </graphic>
+            </Label>
 
-                <Label alignment="TOP_LEFT" text="Hangares">
-                    <graphic>
-                        <ImageView fitHeight="31.0"
-                                   fitWidth="32.0"
-                                   pickOnBounds="true"
-                                   preserveRatio="true">
-                            <image>
-                                <Image url="@imagens/hangar.jpg"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                    <font>
-                        <Font name="System Bold" size="18.0"/>
-                    </font>
-                </Label>
+            <Region prefHeight="15"/>
 
-                <Button fx:id="irCadastro2"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaCadastrarLocalidade"
-                        style="-fx-base: #94F7A2;"
-                        text="Cadastrar Localidade"/>
+            <Button fx:id="irCadastro2"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaCadastrarLocalidade"
+                    style="-fx-background-color: #4F46E5; -fx-text-fill: white; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 35;"
+                    text="Cadastrar Localidade"/>
 
-                <Button fx:id="irCadastro3"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaCadastrarHangar"
-                        style="-fx-base: #94F7A2;"
-                        text="Cadastrar Hangar"/>
+            <Button fx:id="visualizarLocalidade"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaVisualizarLocalidade"
+                    style="-fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 35;"
+                    text="Visualizar Localidades"/>
 
-                <Button fx:id="visualizarLocalidade"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaVisualizarLocalidade"
-                        style="-fx-base: #94F7A2;"
-                        text="Visualizar Localidade"/>
+            <Button fx:id="irCadastro3"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaCadastrarHangar"
+                    style="-fx-background-color: #10B981; -fx-text-fill: white; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 35;"
+                    text="Cadastrar Hangar"/>
 
-                <Button fx:id="visualizarHangar"
-                        maxWidth="1.7976931348623157E308"
-                        mnemonicParsing="false"
-                        onAction="#irParaVisualizarHangar"
-                        style="-fx-base: #94F7A2;"
-                        text="Visualizar Hangar"/>
-
-                <Region VBox.vgrow="ALWAYS"/>
-
-                <Button text="Sair"
-                        mnemonicParsing="false"
-                        onAction="#logout"
-                        prefWidth="120.0"/>
-
-            </children>
-
-            <padding>
-                <Insets top="20.0"/>
-            </padding>
+            <Button fx:id="visualizarHangar"
+                    maxWidth="Infinity"
+                    mnemonicParsing="false"
+                    onAction="#irParaVisualizarHangar"
+                    style="-fx-background-color: #F3F4F6; -fx-text-fill: #1F2937; -fx-cursor: hand; -fx-background-radius: 6; -fx-pref-height: 35;"
+                    text="Visualizar Hangares"/>
 
         </VBox>
 
-    </children>
+    </HBox>
 
-</HBox>
+</VBox>
