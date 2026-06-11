@@ -72,8 +72,8 @@
             </Label>
             <Button fx:id="irCadastro2" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irParaCadastrarLocalidade" style="-fx-base: #94F7A2;" text="Cadastrar Localidade" />
             <Button fx:id="irCadastro3" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irParaCadastrarHangar" style="-fx-base: #94F7A2;" text="Cadastrar Hangar" />
-            <Button fx:id="visualizarLocalidade" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#visualizarLocalidade" style="-fx-base: #94F7A2;" text="Visualizar localidade"/>
-            <Button fx:id="visualizarHangar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#visualizarHangar" style="-fx-base: #94F7A2;" text="Visualizar hangar"/>
+            <Button fx:id="visualizarLocalidade" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irParaVisualizarLocalidade" style="-fx-base: #94F7A2;" text="Visualizar localidade"/>
+            <Button fx:id="visualizarHangar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#irParaVisualizarHangar" style="-fx-base: #94F7A2;" text="Visualizar hangar"/>
          </children>
          <padding>
             <Insets top="20.0" />

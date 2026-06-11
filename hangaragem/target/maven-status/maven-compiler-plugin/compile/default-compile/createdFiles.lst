@@ -22,3 +22,5 @@ org\sahthan\sahthan_v1\controller\MenuController.class
 org\sahthan\sahthan_v1\service\AeronaveService.class
 org\sahthan\sahthan_v1\controller\aeronave\VisualizarAeronaveController.class
 org\sahthan\sahthan_v1\dao\AeronaveDAO.class
+org\sahthan\sahthan_v1\controller\localidade\VisualizarLocalidadeController.class
+org\sahthan\sahthan_v1\controller\hangar\VisualizarHangarController.class
