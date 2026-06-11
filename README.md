@@ -62,5 +62,6 @@ Este comando fará o download de todas as dependências necessárias, compilará
 
 # Diagrama de classes
 
-<img width="997" height="600" alt="diagrama_de_classes_hangar" src="https://github.com/user-attachments/assets/2f470b44-3c0c-45d6-ad7f-27fec8941835" />
+<img width="1003" height="616" alt="image" src="https://github.com/user-attachments/assets/4196a9e8-c572-4546-8481-f05be2eb0ce3" />
+
 
