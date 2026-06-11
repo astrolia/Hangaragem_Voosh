@@ -4,7 +4,7 @@ Este é um sistema de gerenciamento de hangaragem de aeronaves desenvolvido em J
 
 ## 🚀 Tecnologias Utilizadas
 
-*   **Java 21:** Linguagem de programação principal.
+*   **Java:** Linguagem de programação principal.
 *   **JavaFX:** Framework para a construção da interface gráfica do usuário (GUI).
 *   **Hibernate / Jakarta Persistence (JPA):** Mapeamento Objeto-Relacional (ORM) para interação com o banco de dados.
 *   **MySQL:** Sistema de gerenciamento de banco de dados relacional.
