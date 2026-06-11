@@ -2,8 +2,6 @@ package org.sahthan.sahthan_v1.model;
 
 import jakarta.persistence.*;
 
-import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "locacao")

@@ -2,6 +2,7 @@ package org.sahthan.sahthan_v1.service;
 
 import org.sahthan.sahthan_v1.dao.HangarDAO;
 import org.sahthan.sahthan_v1.model.Hangar;
+import java.util.List;
 
 public class HangarService {
 
@@ -24,5 +25,21 @@ public class HangarService {
 
         hangarDAO.atualizarHangar(hangar);
 
+    }
+
+    public void deletarHangar(Hangar hangar) throws Exception{
+        try{
+            hangarDAO.excluirHangar(hangar.getId());
+
+        }catch (Exception e){
+
+            throw new Exception("Falha ao deletar o modelo Service");
+        }
+
+    }
+
+    //lista dos hangares
+    public List<Hangar> listarHangar(){
+        return hangarDAO.listarHangar();
     }
 }
